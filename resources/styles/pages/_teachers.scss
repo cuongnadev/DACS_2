@@ -1,0 +1,102 @@
+.teachers {
+    &_container {
+        padding-bottom: 24px;
+    }
+
+    &_list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+}
+
+.teacher-item {
+    &_box {
+        max-width: 240px;
+        width: 100%;
+        padding: 20px;
+        background-color: $White;
+        border-radius: 20px;
+        box-shadow: $Shadow;
+        transition: all 0.44s ease;
+        position: relative;
+    }
+
+    &_box:hover {
+        transform: scale(0.95);
+    }
+
+    &_avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        object-fit: cover;
+        box-shadow: $Shadow;
+        cursor: pointer;
+    }
+
+    &_info {
+        user-select: none;
+    }
+
+    &_name {
+        @include font-heading($text-sm);
+        color: $Text;
+        cursor: pointer;
+    }
+
+    &_major {
+        max-width: 200px;
+        @include font($text-xs, $font-regular);
+        color: $Gray-3;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &_contact-btn.rounded {
+        padding: 18px;
+        border-color: $Purple;
+    }
+
+    &_more-btn.rounded {
+        width: 16px;
+        height: 16px;
+        padding: 8px;
+        border: none;
+        color: $Gray-3;
+    }
+
+    &_dropdown, &_more-btn.disabled {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    &_dropdown div.absolute{
+        right: -30px;
+    }
+
+    &_dropdown-content {
+        width: 100%;
+        background-color: $White;
+    }
+
+    &_dropdown-link {
+        padding: 4px;
+        border-radius: 6px;
+
+        &:hover {
+            background-color: $Purple-10;
+        }
+    }
+
+    &_dropdown-link p {
+        padding: 4px 6px;
+        @include font($text-sm, $font-semibold);
+        color: $Text;
+        text-align: center;
+    }
+}
+

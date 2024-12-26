@@ -1,0 +1,53 @@
+.pagination {
+    &-container {
+        padding: 0 0 32px 0;
+    }
+
+    &-title {
+        @include font($text-xs, $font-regular);
+        color: $Gray-3;
+
+        & span {
+            @include font($text-xs, $font-semibold);
+            color: $Text;
+        }
+    }
+
+    &-pre-page.rounded,
+    &-next-page.rounded {
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+        border: none;
+
+        & .pagination-icon {
+            color: $Gray-3;
+        }
+
+        & .pagination-icon:hover {
+            color: $Purple;
+        }
+    }
+
+    &-pre-page .pagination-icon {
+        transform: rotate(90deg);
+    }
+
+    &-next-page .pagination-icon {
+        transform: rotate(-90deg);
+    }
+
+    &-page.filled {
+        border-color: $Purple;
+    }
+
+    &-page.outline {
+        color: $Gray-3;
+        border-color: $Gray-3;
+    }
+
+    &-page.outline:hover {
+        color: $Purple;
+        border-color: $Purple;
+    }
+}

@@ -1,0 +1,50 @@
+.statistical {
+    &_container {
+        padding-bottom: 24px;
+    }
+    
+    &_item {
+        width: 100%;
+    }
+
+    &_title {
+        padding: 8px 8px 0 8px;
+        width: 100%;
+        background-color: $White;
+        border-radius: 8px 8px 4px 4px;
+    }
+
+    &_title h2 {
+        padding: 10px;
+        width: 200px;
+        border-radius: 8px 8px 0 0 ;
+        background-color: $Background;
+        text-align: center
+    }
+
+}
+
+.pie-chart_title, .bar-chart_title {
+    @include font($text-base, $font-semibold);
+    color: $Text;
+    text-align: center;
+}
+.bar-chart_tooltip, .pie-chart_tooltip {
+    padding: 8px;
+    background-color: $White;
+    border-radius: 8px;
+
+    & h4 {
+        @include font($text-sm, $font-semibold);
+        color: $Text;
+    }
+
+    & p {
+        @include font($text-sm, $font-regular);
+        color: $Orange;
+    }
+}
+
+.pie-chart_tooltip p {
+    color: $Text;
+}

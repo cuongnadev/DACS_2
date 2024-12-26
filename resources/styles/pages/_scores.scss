@@ -1,0 +1,134 @@
+// Scores
+.scores {
+    &_container {
+        padding-bottom: 24px;
+    }
+    
+    &_box-container {
+        width: 100%;
+        border-radius: 20px;
+        background-color: $White;
+        box-shadow: $Shadow;
+        padding-bottom: 8px;
+    }
+
+    &_box-container table {
+        width: 100%;
+    }
+
+    &_box-container table th {
+        @include font($text-md, $font-semibold);
+        color: $Text;
+    }
+
+    &_box-container.summary table th,
+    &_box-container.summary table td,
+    &_box-container.courses table th.name, 
+    &_box-container.courses table td.name {
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: start;
+    }
+
+    &_box-container.summary table th:first-child,
+    &_box-container.summary table td:first-child {
+        padding-left: 20px;
+    }
+
+    &_box-container.summary table th:last-child,
+    &_box-container.summary table td:last-child {
+        padding-right: 20px;
+    }
+
+    &_box-container table td {
+        padding: 10px 20px;
+        border-bottom: 1px solid $Gray-3;
+        text-align: center;
+        color: $Gray-3;
+    }
+
+    &_box-container table tr:last-child td {
+        border: none;
+    }
+
+    &_box-container table td.name {
+        max-width: 200px;
+        @include font($text-sm, $font-semibold);
+        text-align: start;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &_box-container.courses .label {
+        @include font($text-md, $font-semibold);
+        color: $Purple;
+    }
+
+    &_title {
+        width: 100%;
+        padding: 10px 20px;
+        @include font($text-md, $font-semibold);
+        color: $White;
+        border-radius: 20px 20px 0 0;
+        background-color: $Purple;
+    }
+
+    &_class-items {
+        width: 100%;
+        padding: 0 20px 12px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 10px;
+    }
+
+    &_class-item {
+        width: 100%;
+        padding: 8px;
+        border-radius: 40px;
+        border: 1px solid $Gray-2;
+    }
+
+    &_class-item:hover {
+        background-color: $Purple-10;
+        box-shadow: $Shadow;
+    }
+
+    &_class-item p {
+        @include font($text-md, $font-regular);
+    }
+
+    &_class-item .name {
+        font-weight: $font-semibold;
+        max-width: 320px;
+    }
+}
+
+// Enter Scores
+.enter-scores {
+    &_container {
+        width: 100%;
+        padding-bottom: 24px;
+    }
+
+    &_input {
+        width: 180px;
+        height: 40px;
+        box-shadow: $Shadow;
+    }
+
+    &_input.disabled {
+        background-color: $Gray-2;
+    }
+
+    &_btn {
+        align-self: flex-end;
+    }
+}
+
+// View Scores
+.view-scores {
+    &_container {
+        padding-bottom: 24px;
+    }
+}

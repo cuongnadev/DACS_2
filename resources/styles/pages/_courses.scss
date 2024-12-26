@@ -1,0 +1,235 @@
+.courses {
+    &_container {
+        padding-bottom: 24px;
+    }
+
+    &_confirm {
+        align-self: flex-end;
+    }
+
+    &_form {
+        width: 100%;
+        background-color: $White;
+        border-radius: 20px;
+        box-shadow: $Shadow;
+    }
+
+    &_title {
+        width: 100%;
+        padding: 10px 20px;
+        @include font($text-md, $font-semibold);
+        color: $White;
+        background-color: $Purple;
+        border-radius: 20px 20px 0 0;
+    }
+
+    &_form table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    &_form th, &_form td {
+        padding: 10px 20px;
+    }
+    
+    &_form td {
+        text-align: center;
+        border-top: 1px solid $Gray-3;
+    }
+
+    &_form th.courses_name, &_form td.courses_name, 
+    &_form th.courses_teacher, &_form td.courses_teacher {
+        text-align: start;
+        width: 280px;
+    }
+
+    &_credits svg, &_room svg , &_schedule svg {
+        margin: auto;
+    }
+
+    &_action * {
+        margin: auto;
+    }
+
+    &_action &_more-btn {
+        cursor: pointer;
+    }
+
+    &-detail_content {
+        width: 80%;
+        box-shadow: $Shadow;
+    }
+
+    &_create-btn {
+        align-self: flex-end;
+    }
+
+    &_dropdown-content {
+        width: 100px;
+        background-color: $White;
+    }
+
+    &_dropdown-link {
+        padding: 4px;
+        border-radius: 6px;
+        @include font($text-sm, $font-semibold);
+        color: $Text;
+
+        &:hover {
+            background-color: $Purple-10;
+        }
+    }
+
+    &_dropdown-link p {
+        padding: 4px 6px;
+        @include font($text-sm, $font-semibold);
+        color: $Text;
+    }
+
+    &_action &_more-btn.disabled {
+        cursor: default;
+        color: $Gray-3;
+    }
+
+    &_label {
+        @include font($text-xs, $font-regular);
+        color: $Orange;
+        white-space: nowrap;
+    }
+}
+
+.create-courses_container,
+.courses-detail_container,
+.list-students_container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: $Black, $alpha: 0.4);
+    z-index: 1000;
+}
+
+.courses-detail_content {
+    margin-top: 100px;
+    max-height: 520px;
+
+    & .courses_form thead th {
+        position: sticky;
+        top: 0;
+        background-color: $White;
+        z-index: 10;
+    }
+    
+    & .courses_form tbody {
+        display: block;
+        max-height: 432px;
+        overflow-y: auto;
+        width: 100%;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    
+    & .courses_form thead {
+        display: table;
+        width: 100%;
+    }
+    
+    & .courses_form tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+}
+
+.courses-create {
+    &_form {
+        width: 40%;
+        border-radius: 20px;
+        background-color: $White;
+    }
+
+    &_form form {
+        padding: 10px 18px;
+        width: 100%;
+    }
+
+    &_form form select {
+        color: $Text;
+    }
+
+    &_form form select:focus {
+        border-color: $Purple;
+        box-shadow: none;
+    }
+
+    &_form form select option:hover {
+        appearance: none;
+        background-color: $Purple;
+        color: $White;
+    }
+}
+
+.list-students_container {
+    & .students_list {
+        max-height: 576px;
+
+        & .students_table {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            thead {
+                width: 100%;
+                flex: 0 0 auto;
+            }
+
+            & tbody {
+                flex: 1 1 auto;
+                max-height: 520px;
+                overflow-y: auto;
+                width: 100%;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            thead th {
+                position: sticky;
+                top: 0;
+                background-color: $White;
+                border-radius: 20px 20px 0 0;
+                z-index: 10;
+            }
+
+            th:nth-child(2), td.student_header {
+                width: 280px;
+            }
+            th:nth-child(3), td.student_id {
+                width: 150px;
+            }
+            th:nth-child(4), td.student_birth {
+                width: 120px;
+            }
+            th:nth-child(5), td.student_phone {
+                width: 180px;
+            }
+            th:nth-child(6), td.student_city {
+                width: 160px;
+            }
+            th:nth-child(7), th:nth-child(8), td.student_contact {
+                width: 80px;
+            }
+            th:nth-child(9), td.student_action {
+                width: 125px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

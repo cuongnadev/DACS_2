@@ -1,0 +1,28 @@
+.toolbar {
+    &_sorted-content {
+        max-height: 120px;
+        overflow-y: scroll;
+        background-color: $Background;
+    }
+    // Scrollbar CSS
+    &_sorted-content::-webkit-scrollbar {
+        border-radius: 0;
+        width: 6px;
+    }
+    &_sorted-content::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background-color: $Purple;
+    }
+    &_sorted-content::-webkit-scrollbar-track {
+        border-radius: 0;
+        background-color: $Purple-10;
+    }
+
+    &_sorted-link {
+        @include font($text-sm, $font-medium);
+    }
+
+    &_sorted-link:hover {
+        background-color: $Purple-10;
+    }
+}

@@ -1,0 +1,65 @@
+.schedule {
+    &_container {
+        padding-bottom: 24px;
+    }
+
+    &_header {
+        padding: 10px;
+        width: 100%;
+        @include font($text-base, $font-medium);
+        color: $Text;
+        border-radius: 10px;
+        box-shadow: $Shadow;
+        background-color: $White;
+    }
+
+    &_table {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: $Shadow;
+        background-color: $White;
+    }
+
+    &_table table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    &_table th,
+    &_table td {
+        border: 1px solid $Gray-3;
+        width: 12.5%;
+        height: 50px;
+        text-align: center;
+    }
+
+    &_period-label,
+    &_table th {
+        @include font($text-md, $font-semibold);
+        color: $Text;
+    }
+    
+    &_cell {
+        padding: 10px;
+        @include font($text-sm, $font-medium);
+        color: white;
+        vertical-align: middle;
+        background-color: $Purple;
+    }
+
+    &_note-label {
+        @include font($text-sm, $font-medium);
+        color: $Orange;
+        text-decoration: underline;
+    }
+
+    &_note-item {
+        @include font($text-sm, $font-regular);
+        color: $Text
+    }
+
+    &_empty-cell {
+        background-color: $Background;
+    }
+}

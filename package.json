@@ -1,0 +1,39 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@headlessui/react": "^2.1.8",
+        "@inertiajs/react": "^1.0.0",
+        "@tailwindcss/forms": "^0.5.3",
+        "@vitejs/plugin-react": "^4.2.0",
+        "autoprefixer": "^10.4.12",
+        "axios": "^1.7.4",
+        "laravel-vite-plugin": "^1.0",
+        "postcss": "^8.4.31",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "sass": "^1.79.1",
+        "tailwindcss": "^3.2.1",
+        "vite": "^5.4.5"
+    },
+    "dependencies": {
+        "@chakra-ui/icons": "^2.2.4",
+        "@chakra-ui/react": "^3.2.2",
+        "@emotion/react": "^11.13.5",
+        "@emotion/styled": "^11.13.5",
+        "@inertiajs/inertia": "^0.11.1",
+        "@inertiajs/inertia-react": "^0.8.1",
+        "@inertiajs/react": "^1.2.0",
+        "@react-pdf/renderer": "^4.0.0",
+        "@tippyjs/react": "^4.2.6",
+        "framer-motion": "^11.11.17",
+        "jspdf": "^2.5.2",
+        "jspdf-customfonts": "^0.0.4-rc.4",
+        "prop-types": "^15.8.1",
+        "recharts": "^2.15.0"
+    }
+}

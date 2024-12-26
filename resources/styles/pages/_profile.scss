@@ -1,0 +1,134 @@
+// Profile Styles
+.profile {
+    padding-bottom: 24px;
+
+    &_header {
+        width: 100%;
+        background-color: $Purple;
+        border-radius: 0 0 20px 20px;
+    }
+
+    &_header img {
+        width: 100%;
+    }
+
+    &_user-title {
+        width: 85%;
+        position: relative;
+
+        &-avatar {
+            position: absolute;
+            top: -100px;
+            width: 140px;
+            height: 140px;
+            border-radius: 100px;
+            border: 4px solid $White;
+            background-color: $Gray-3;
+            box-shadow: $Shadow;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100px;
+            }
+        }
+
+        &-avatar-input div, &-avatar-input div img {
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+        }
+        
+        &-info {
+            padding: 48px 0 16px 0;
+        }
+
+        &-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $Text;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+    
+        &-id,
+        &-course,
+        &-field,
+        &-science {
+            @include font ($text-sm, $font-medium);
+            color: $Gray-3;
+        }
+    }
+
+    &_actions-item {
+        border-radius: 8px;
+    }
+
+    &_update-btn {
+        align-self: flex-end;
+    }
+}
+
+.profile-details_container {
+    width: 85%;
+
+    & .profile-details_form {
+        & h3 {
+            padding: 8px;
+            @include font-heading($text-base);
+            color: $White;
+            background-color: $Purple;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+
+        & table {
+            padding-left: 10px;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 0.5rem;
+            background-color: $White;
+            box-shadow: $Shadow;
+            border-radius: 0 0 10px 10px;
+        }
+
+        & table td {
+            padding: 0.5rem;
+            color: $Gray-3;
+
+            &.profile-details_form-lable {
+                @include font ($text-md, $font-medium);
+                width: 180px;
+                color: $Text;
+            }
+        }
+
+        & table .profile-details_form-title {
+            position: relative;
+            @include font ($text-base, $font-semibold);
+            color: $Text;
+        }
+
+        table .profile-details_form-title::before {
+            position: absolute;
+            content: "";
+            top: 4px;
+            left: 0;
+            width: 4px;
+            height: 80%;
+            background-color: $Purple;
+        }
+    }
+
+    & .profile-details_form .family-member + .family-member {
+        border-radius: 10px;
+    }
+
+    & .profile-details_input {
+        width: 240px;
+    }
+}
